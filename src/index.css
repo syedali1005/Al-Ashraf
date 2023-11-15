@@ -1,13 +1,77 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&family=Roboto:wght@100;300;400;700;900&family=Ubuntu+Mono:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app{
+  height: 100%;
+  background-color:#000000;
+  @apply text-white;
+}
+.bg-black {
+  border: #b9a874 4px  double;
+}
+.top-0{
+  top: 1px;
+}
+.navbar123 {
+  margin-left: -20px !important;
+  width: 20% !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.font-opensans {
+  font-size: 20px;
+}
+.p-4 {
+  padding: 1rem;
+  padding-left: 2rem;
+}
+.img1{
+  float: left;
+    margin-left: -115px;
+    margin-bottom: 100px;
+
+}
+
+.text2{
+  margin-left: 100px;
+}
+
+.roundedshape{
+  margin-left: -20px;  
+}
+.margin-left-x{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.margin-tb{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.padding-bt{
+  padding-bottom: 300px;
+  padding-top: 0px
+}
+.margin-bl{
+  margin-bottom: 190px;
+}
+.logo-1{
+  margin-top: -120px;
+}
+
+.mysection{
+  margin-bottom: 100px;
+}
+
+.heading23 {
+  font-size: 45px !important;
+  margin-bottom: 30px;
+}
+
+.marlr{
+  margin-right: 120px;
+  margin-left:120px;
 }
