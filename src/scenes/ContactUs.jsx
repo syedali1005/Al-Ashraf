@@ -32,16 +32,18 @@ const Contact = () => {
         }}
         className="text-center mb-8"
       >
-        <p className="heading23 text-uppercase text-center font-playfair text-gold">
-          <b>CONTACT US</b>
-        </p>
-        <div className="flex justify-center my-2">
-          <LineGradient />
+        <div>
+          <p className="heading23 text-uppercase text-center font-playfair text-gold">
+            <b>CONTACT US</b>
+          </p>
+          <div className="flex justify-center my-2">
+          <LineGradient width="w-1/2" />
+          </div>
         </div>
       </motion.div>
 
       {/* FORM & IMAGE */}
-      <div className="md:flex md:justify-between gap-16 mt-5">
+      <div className="md:flex md:justify-center gap-8">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -70,16 +72,17 @@ const Contact = () => {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="basis-1/2 mt-10 md:mt-0"
+          className="w-full md:w-1/2"
         >
           <form
             target="_blank"
             onSubmit={onSubmit}
             action="https://formsubmit.co/syedaliahmad22@gmail.com"
             method="POST"
+            className="bg-gold p-8 rounded-md shadow-md"
           >
             <input
-              className="w-full bg-gold font-semibold placeholder-opaque-black p-3"
+              className="w-full bg-white font-semibold text-black placeholder-opaque-black p-3"
               type="text"
               placeholder="NAME"
               {...register("name", {
@@ -95,7 +98,7 @@ const Contact = () => {
             )}
 
             <input
-              className="w-full bg-gold font-semibold placeholder-opaque-black p-3 mt-5"
+              className="w-full bg-gold  bg-white font-semibold text-black placeholder-opaque-black p-3 mt-5"
               type="text"
               placeholder="EMAIL"
               {...register("email", {
@@ -111,7 +114,7 @@ const Contact = () => {
             )}
 
             <textarea
-              className="w-full bg-gold font-semibold placeholder-opaque-black p-3 mt-5"
+              className="w-full bg-gold  bg-white font-semibold text-black placeholder-opaque-black p-3 mt-5"
               name="message"
               placeholder="MESSAGE"
               rows="4"
