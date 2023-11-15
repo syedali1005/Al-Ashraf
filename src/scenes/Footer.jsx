@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
         <div className="text-center md:text-right">
           {/* Replace "Subscribe" with your logo */}
-          <img src={logo} alt="Your Logo" className="w-24 h-24 mb-2 ml-24" />
+          <img src={logo} alt="Your Logo" className="w-24 h-24 mb-2 ml-20" />
           <p className="text-gold ">&copy; 2023 Al-Ashraf Group Of Companies</p>
         </div>
       </div>

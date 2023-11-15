@@ -19,9 +19,8 @@ const Contact = () => {
   };
 
   return (
-    
     <section id="contact" className="contact py-0 mr-10">
-    {/* HEADINGS */}
+      {/* HEADINGS */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -31,15 +30,13 @@ const Contact = () => {
           hidden: { opacity: 0, x: 50 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="flex justify-end w-full"
+        className="text-center mb-8"
       >
-        <div>
-          <p className="md:flex md:justify-between heading23 text-uppercase text-center font-playfair text-gold ml-28 mr-8">
-              <b>CONTACT US</b>
-          </p>
-          <div className="flex md:justify-end">
-            <LineGradient width="w-1/2" />
-          </div>
+        <p className="heading23 text-uppercase text-center font-playfair text-gold">
+          <b>CONTACT US</b>
+        </p>
+        <div className="flex justify-center my-2">
+          <LineGradient />
         </div>
       </motion.div>
 
