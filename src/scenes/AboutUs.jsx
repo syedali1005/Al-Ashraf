@@ -6,7 +6,7 @@ const AboutUs = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
     <section id="about-us" className="pt-10 pb-24">
-    {/* HEADER AND IMAGE SECTION */}
+      {/* HEADER AND IMAGE SECTION */}
       <div className="basis-3/5 z-10 mt-16 md:mt-4 flex justify-center md:order-2 margin-tb">
         <motion.div
           className="md:w-1/3"
@@ -19,7 +19,7 @@ const AboutUs = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-        {isAboveLarge ? (
+          {isAboveLarge ? (
             <div>
               <img
                 alt="profile"
@@ -34,9 +34,9 @@ const AboutUs = () => {
               src="assets/logo-text.png"
             />
           )}
-          
+
           <LineGradient width="w-1/3" />
-          <p className="mb-7 mt-8">
+          <p className=" mt-8">
             "The people who make up the team of Al- Ashraf Group of Companies
             embody our values of strength, performance and passion. Our
             employees have strong connections to these ideals, which has
@@ -51,7 +51,7 @@ const AboutUs = () => {
       </div>
 
       {/* ABOUT */}
-      <div className="md:flex md:justify-between mt-16 gap-32">
+      <div className="md:flex md:justify-between mt-10 gap-32">
         {/* VISION */}
 
         <motion.div
@@ -66,18 +66,16 @@ const AboutUs = () => {
           }}
         >
           <div className="relative h-32">
-            <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl">01</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">
+            <div className="z-10" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-gold absolute right-20 top-0 z-[-1]">
+              <p className="font-playfair font-semibold text-3xl mt-3 text-black text-center justify-center">
                 VISION
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-gold absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            To provide the foundation of society for the future,
-            growth and progress. Embracing change with a commitment to a
-            brighter tomorrow
+            To provide the foundation of society for the future, growth and
+            progress. Embracing change with a commitment to a brighter tomorrow
           </p>
         </motion.div>
 
@@ -94,13 +92,12 @@ const AboutUs = () => {
           }}
         >
           <div className="relative h-32">
-            <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl">02</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">
+            <div className="z-10" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-gold absolute right-20 top-0 z-[-1]">
+              <p className="font-playfair font-semibold text-3xl mt-3 text-black text-center justify-center">
                 MISSION
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-black absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
             To aspire to be the most esteemed and sought-after company in our
@@ -121,13 +118,12 @@ const AboutUs = () => {
           }}
         >
           <div className="relative h-32">
-            <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl">03</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">
+            <div className="z-10" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-gold absolute right-20 top-0 z-[-1]">
+              <p className="font-playfair font-semibold text-3xl mt-3 text-black text-center justify-center">
                 VALUES
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-gold absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
             We're a trusted partner with a solid track record and a skilled

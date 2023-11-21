@@ -3,7 +3,7 @@ import React from "react";
 const Location = () => {
   return (
     <div className="location-container text-center">
-      <h1 className="heading23 text-uppercase text-center font-playfair text-gold">
+      <h1 className="heading23 text-uppercase LOCATION text-center font-playfair text-gold mt-0" >
         <b>OUR LOCATION</b>
       </h1>
       <div className="map-container">

@@ -11,7 +11,9 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
       ? "#about-us"
       : lowerCasePage === "contact us"
       ? "#contact"
-      : `#${lowerCasePage}`;
+      : lowerCasePage === "team"
+      ? "#our-team" // Update this to match your team section ID
+      : `#${lowerCasePage}`;      
 
   const handleClick = () => {
     setTimeout(() => {
@@ -59,6 +61,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             />
             <Link
               page="About Us"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <Link
+              page="Team"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
@@ -113,6 +120,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
+              <Link
+              page="Team"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
               <Link
                 page="Companies"
                 selectedPage={selectedPage}

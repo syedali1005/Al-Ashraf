@@ -3,11 +3,12 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const images = [
-  { id: 1, src: "../assets/banner1.jpeg", alt: "Image 1" },
-  { id: 2, src: "../assets/banner2.jpeg", alt: "Image 2" },
-  { id: 3, src: "../assets/banner3.jpeg", alt: "Image 3" },
-  { id: 4, src: "../assets/banner4.jpeg", alt: "Image 4" },
-  { id: 5, src: "../assets/banner6.jpeg", alt: "Image 5" },
+  { id: 1, src: "../assets/Banner.jpeg", alt: "Image 1" },
+  { id: 2, src: "../assets/banner1.jpeg", alt: "Image 2" },
+  { id: 3, src: "../assets/banner2.jpeg", alt: "Image 3" },
+  { id: 4, src: "../assets/banner3.jpeg", alt: "Image 4" },
+  { id: 5, src: "../assets/banner4.jpeg", alt: "Image 5" },
+  { id: 6, src: "../assets/banner6.jpeg", alt: "Image 6" },
   // Add more images as needed
 ];
 
@@ -19,8 +20,8 @@ const MainCarousel = () => {
         showThumbs={false}
         showIndicators={false}
         showStatus={false}
-        autoPlay={true} 
-        interval={2000} 
+        autoPlay={false}
+        interval={2000}
       >
         {images.map((image) => (
           <div key={image.id}>

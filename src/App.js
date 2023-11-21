@@ -11,6 +11,7 @@ import ContactUs from "./scenes/ContactUs";
 import Careers from "./scenes/Careers";
 import { motion } from "framer-motion";
 import Footer from "./scenes/Footer";
+import Team from "./scenes/Team";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -30,6 +31,7 @@ function App() {
   }, []);
 
   return (
+
     <div className="app bg-gold">
       <Navbar  isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <MainCarousel />
@@ -46,9 +48,14 @@ function App() {
       ></motion.div>
       <div className="w-5/6 mx-auto md:h-full">
         <AboutUs />
+        <div className="mx-auto md:h-full mb-10">
+          <Team />
+        </div>
         <div className="w-5/6 mx-auto md:h-full">
           <CompanySlider />
-          <Location />
+        </div>
+        <div className="w-5/6 mx-auto md:h-full">
+        <Location />
         </div>
         <div className="w-5/6 mx-auto md:h-full">
           <Careers />
@@ -60,7 +67,9 @@ function App() {
       </div>
       <LineGradient />
     </div>
+
   );
 }
 
 export default App;
+
