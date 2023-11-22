@@ -66,6 +66,8 @@ const OurTeam = () => {
     padding: "20px",
     border: "2px solid #b9a874",
     borderRadius: "8px",
+    marginLeft: "5px",
+    marginRight: "5px"
   };
 
   const memberStyle = {

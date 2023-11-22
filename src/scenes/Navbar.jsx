@@ -1,33 +1,34 @@
 import React from "react";
 import { useState } from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from "react-router-dom";
 import useMediaQuery from "../hooks/useMediaQuery";
 import logo from "../assets/logo.png";
 
-const Link = ({ page, selectedPage, setSelectedPage }) => {
+const CustomLink = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
-  const href =
-    lowerCasePage === "about us"
-      ? "#about-us"
-      : lowerCasePage === "contact us"
-      ? "#contact"
-      : lowerCasePage === "team"
-      ? "#our-team" // Update this to match your team section ID
-      : `#${lowerCasePage}`;      
+  const paths = {
+    home: "/",
+    "about us": "/about",
+    team: "/team", // Update this to match your team route path
+    companies: "/Porfolio", // Update this to match your companies route path
+    careers: "/careers", // Update this to match your careers route path
+    "contact us": "/contact",
+  };
+
+  const to = paths[lowerCasePage] || `/${lowerCasePage}`;
 
   const handleClick = () => {
-    setTimeout(() => {
-      setSelectedPage(lowerCasePage);
-    }, 100);
+    setSelectedPage(lowerCasePage);
   };
+
   return (
-    <AnchorLink
+    <Link
+      to={to}
       className={`hover:text-gold transition duration-500`}
-      href={href}
       onClick={handleClick}
     >
       {page}
-    </AnchorLink>
+    </Link>
   );
 };
 
@@ -54,32 +55,32 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         {/* DESKTOP NAV */}
         {isDesktop ? (
           <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
-            <Link
+            <CustomLink
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <CustomLink
               page="About Us"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <CustomLink
               page="Team"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
-              page="Companies"
+            <CustomLink
+              page="Portfolio"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <CustomLink
               page="Careers"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <CustomLink
               page="Contact Us"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
@@ -110,32 +111,32 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
             {/* MENU ITEMS */}
             <div className="flex flex-col gap-10 text-2xl text-gold p-4">
-              <Link
+              <CustomLink
                 page="Home"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <CustomLink
                 page="About Us"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
-              page="Team"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-              <Link
-                page="Companies"
+              <CustomLink
+                page="Team"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <CustomLink
+                page="Portfolio"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <CustomLink
                 page="Careers"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <CustomLink
                 page="Contact Us"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}

@@ -1,3 +1,4 @@
+import React from 'react';
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
@@ -5,7 +6,7 @@ import { motion } from "framer-motion";
 const AboutUs = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="about-us" className="pt-10 pb-24">
+    <section id="about-us" className="pt-10 pb-24 ">
       {/* HEADER AND IMAGE SECTION */}
       <div className="basis-3/5 z-10 mt-16 md:mt-4 flex justify-center md:order-2 margin-tb">
         <motion.div
@@ -73,7 +74,7 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-          <p className="mt-5">
+          <p className="mt-5 justify-between">
             To provide the foundation of society for the future, growth and
             progress. Embracing change with a commitment to a brighter tomorrow
           </p>
@@ -99,7 +100,7 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-          <p className="mt-5">
+          <p className="mt-5 justify-between">
             To aspire to be the most esteemed and sought-after company in our
             industry, passionately committed to creating unparalleled value for
             our esteemed stakeholders.
@@ -125,7 +126,7 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-          <p className="mt-5">
+          <p className="mt-5 justify-between">
             We're a trusted partner with a solid track record and a skilled
             team, ensuring excellence and innovation. Our commitment extends to
             our people, customers, and communities, reflecting care for all and
