@@ -101,7 +101,7 @@ const CompanyPortfolio = () => {
       <section className="bg-black py-16 mt-16">
         <div className="container mx-auto px-4 h-auto w-auto">
           <h2 className="text-4xl font-bold mb-8 text-center text-gold">Our Portfolio</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 pl-6">
             {portfolioItems.map((item) => (
               <motion.div
                 key={item.id}
