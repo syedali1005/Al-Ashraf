@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+
 
 const SocialMediaIcons = ({ socialMedia }) => {
     return (
@@ -17,6 +19,36 @@ const SocialMediaIcons = ({ socialMedia }) => {
       </div>
     );
   };
+
+  const TeamMemberCard = ({ member }) => {
+    const [isFlipped, setIsFlipped] = useState(false);
+  
+    const handleFlip = () => {
+      setIsFlipped(!isFlipped);
+    };
+  
+    return (
+      <motion.div
+        className={`flip-card ${isFlipped ? 'flipped' : ''}`}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={handleFlip}
+      >
+        <motion.div className="flip-card-inner1">
+          <motion.div className="flip-card-front1">
+            <img src={member.imageUrl} alt={member.name} className="team-member-image" />
+            <h3>{member.name}</h3>
+            <p>{member.designation}</p>
+          </motion.div>
+          <motion.div className="flip-card-back1">
+           
+            <SocialMediaIcons socialMedia={member.socialMedia} />
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    );
+  };
+  
   
 const OurTeam = () => {
   const teamMembers = [
@@ -63,9 +95,9 @@ const OurTeam = () => {
     justifyContent: "space-around",
     alignItems: "center",
     flexWrap: "wrap",
-    padding: "20px",
-    border: "2px solid #b9a874",
-    borderRadius: "8px",
+    padding: "15px",
+    border: "1px solid #b9a874",
+    borderRadius: "2px",
     marginLeft: "5px",
     marginRight: "5px"
   };
@@ -74,32 +106,11 @@ const OurTeam = () => {
     textAlign: "center",
     margin: "0px",
     maxWidth: "300px",
-    padding: "15px", // Adding padding
-  };
-
-  const imageStyle = {
-    width: "2500px",
-    height: "300px",
-    borderRadius: "50%",
-    marginBottom: "10px",
-  };
-  const nameStyle = {
-    fontFamily: "Arial, sans-serif", 
-    fontSize: "25px", 
-    fontWeight: "bold", 
-    color: "#b9a874", 
-    marginTop: "10px", 
-  };
-
-  const designationStyle = {
-    fontFamily: "Arial, sans-serif",
-    fontSize: "18px",
-    color: "#b9a874",
-    marginBottom: "10px",
+    padding: "2px", // Adding padding
   };
 
   return (
-    <div id="our-team">
+    <div id="our-team" className="my-20">
       <h1
         className="heading23 text-uppercase text-center font-playfair"
         style={paragraphStyle}
@@ -107,17 +118,14 @@ const OurTeam = () => {
         <b>OUR TEAM</b>
       </h1>
       <section className="team-members mt-15" style={teamStyle}>
-        {teamMembers.map((member, index) => (
-          <div key={index} style={memberStyle}>
-            <img src={member.imageUrl} alt={member.name} style={imageStyle} />
-            <h3 style={nameStyle}>{member.name}</h3>
-            <p style={designationStyle}>{member.designation}</p>
-            <SocialMediaIcons socialMedia={member.socialMedia} />
-          </div>
-        ))}
-      </section>
-    </div>
-  );
+      {teamMembers.map((member, index) => (
+        <div key={index} style={memberStyle}>
+          <TeamMemberCard member={member} />
+        </div>
+      ))}
+    </section>
+  </div>
+);
 };
 
 export default OurTeam;
