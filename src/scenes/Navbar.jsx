@@ -24,7 +24,7 @@ const CustomLink = ({ page, selectedPage, setSelectedPage }) => {
   return (
     <Link
       to={to}
-      className={`hover:text-gold transition duration-500`}
+      className={`hover:text-gold transition duration-100`}
       onClick={handleClick}
     >
       {page}
@@ -43,8 +43,8 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   };
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full top-0 py-0`}>
-      <div className="flex items-center justify-between w-5/6">
+    <nav className={`${navbarBackground} z-40 w-full top-0 py-4 shadow-lg`}>
+      <div className="flex items-center justify-between w-5/6 mx-auto">
         <nav
           className="navbar123 hover:filter hover:saturate-200 cursor-pointer transition duration-500"
           onClick={handleLogoClick}
@@ -54,7 +54,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
         {/* DESKTOP NAV */}
         {isDesktop ? (
-          <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
+          <div className="flex justify-between gap-12 font-semibold text-lg">
             <CustomLink
               page="Home"
               selectedPage={selectedPage}
@@ -88,8 +88,8 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </div>
         ) : (
           <button
-            className="rounded-full p-2"
-            style={{ position: "absolute", top: "12px", right: "15px" }}
+            className="rounded-full p-3 bg-gray-950"
+            style={{ position: "absolute", top: "20px", right: "15px" }}
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <img alt="menu-icon" src="../assets/menu-icon.svg" />

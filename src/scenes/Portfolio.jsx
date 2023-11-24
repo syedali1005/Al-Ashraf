@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const CompanyPortfolio = () => {
   const [portfolioItems, setPortfolioItems] = useState([]);
@@ -97,33 +98,46 @@ const CompanyPortfolio = () => {
 
   return (
     <div id="our-portfolio">
-    <section className="bg-black py-16 mt-16">
-      <div className="container mx-auto px-4 h-auto w-auto">
-        <h2 className="text-4xl font-bold mb-8 text-center text-gold">Our Portfolio</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolioItems.map((item) => (
-            <div className="flip-card" key={item.id}>
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-auto object-center"
-                  />
-                </div>
-                <div className="flip-card-back flex flex-col justify-center items-center">
-                  <div className="p-4 text-center">
-                    <h3 className="text-xl font-semibold mb-4 mt-8">{item.title}</h3>
-                    <p className="text-gold text-base">{item.description}</p>
-                    {/* Add additional details for each portfolio item */}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+      <section className="bg-black py-16 mt-16">
+        <div className="container mx-auto px-4 h-auto w-auto">
+          <h2 className="text-4xl font-bold mb-8 text-center text-gold">Our Portfolio</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioItems.map((item) => (
+              <motion.div
+                key={item.id}
+                className="flip-card"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <motion.div className="flip-card-inner">
+                  <motion.div className="flip-card-front">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-auto object-center"
+                    />
+                  </motion.div>
+                  <motion.div
+                    className="flip-card-back flex flex-col justify-center items-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <div className="p-4 text-center">
+                      <h3 className="text-xl font-semibold mb-4 mt-8">{item.title}</h3>
+                      <p className="text-gold text-base">{item.description}</p>
+                      {/* Add additional details for each portfolio item */}
+                    </div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </div>
   );
 };
