@@ -68,8 +68,8 @@ const AboutUs = () => {
         >
           <div className="relative h-32">
             <div className="z-10" />
-            <div className="w-1/2 md:w-3/4 h-32 bg-gold absolute right-20 top-0 z-[-1]">
-              <p className="font-playfair font-semibold text-3xl mt-3 text-black text-center justify-center">
+            <div className="w-1/2 md:w-3/4 h-32 bg-black absolute right-20 top-0 z-[-1]">
+              <p className="font-playfair font-semibold text-4xl mt-3 text-white justify-center text-center">
                 VISION
               </p>
             </div>
@@ -94,9 +94,9 @@ const AboutUs = () => {
         >
           <div className="relative h-32">
             <div className="z-10" />
-            <div className="w-1/2 md:w-3/4 h-32 bg-gold absolute right-20 top-0 z-[-1]">
-              <p className="font-playfair font-semibold text-3xl mt-3 text-black text-center justify-center">
-                MISSION
+            <div className="w-1/2 md:w-3/4 h-32 bg-black absolute right-20 top-0 z-[-1]">
+            <p className="font-playfair font-semibold text-4xl mt-3 text-white justify-center text-center">
+            MISSION
               </p>
             </div>
           </div>
@@ -120,9 +120,9 @@ const AboutUs = () => {
         >
           <div className="relative h-32">
             <div className="z-10" />
-            <div className="w-1/2 md:w-3/4 h-32 bg-gold absolute right-20 top-0 z-[-1]">
-              <p className="font-playfair font-semibold text-3xl mt-3 text-black text-center justify-center">
-                VALUES
+            <div className="w-1/2 md:w-3/4 h-32 bg-black absolute right-20 top-0 z-[-1]">
+            <p className="font-playfair font-semibold text-4xl mt-3 text-white justify-center text-center">
+            VALUES
               </p>
             </div>
           </div>
