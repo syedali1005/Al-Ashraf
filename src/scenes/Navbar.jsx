@@ -43,7 +43,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   };
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full top-0 py-4 shadow-lg`}>
+    <nav className={`${navbarBackground} z-40 w-full top-0 py-0 shadow-lg`}>
       <div className="flex items-center justify-between w-5/6 mx-auto">
         <nav
           className="navbar123 hover:filter hover:saturate-200 cursor-pointer transition duration-500"
@@ -89,7 +89,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         ) : (
           <button
             className="rounded-full p-3 bg-gray-950"
-            style={{ position: "absolute", top: "20px", right: "15px" }}
+            style={{ position: "absolute", top: "5px", right: "20px" }}
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             <img alt="menu-icon" src="../assets/menu-icon.svg" />

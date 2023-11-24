@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./scenes/Navbar";
 import MainCarousel from "./scenes/MainCarousel";
 import DotGroup from "./scenes/DotGroup";
@@ -33,7 +33,7 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app bg-gold">
         <Navbar
           isTopOfPage={isTopOfPage}
@@ -89,7 +89,7 @@ const App = () => {
         <Footer />
         <LineGradient />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
