@@ -66,7 +66,7 @@ const AboutUs = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <div className="relative h-32">
+          <div className="sticky h-32">
             <div className="z-10" />
             <div className="w-1/2 md:w-3/4 h-32 bg-black absolute right-20 top-0 z-[-1]">
               <p className="font-playfair font-semibold text-4xl mt-3 text-white justify-center text-center">
