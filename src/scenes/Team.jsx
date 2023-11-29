@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const TeamMemberCard = ({ member }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(true);
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
@@ -27,7 +27,7 @@ const TeamMemberCard = ({ member }) => {
         <motion.div className="flip-card-back1 flex flex-col justify-center items-center">
           <div className="p-4 text-center">
             <h3 className="text-xl font-semibold mb-2 mt-4">{member.name}</h3>
-            <p className="text-gold text-base">{member.description}</p>
+            <p className="text-gold text-base text-center">{member.description}</p>
           </div>
         </motion.div>
       </motion.div>
@@ -96,6 +96,8 @@ const OurTeam = () => {
     fontSize: "16px",
     lineHeight: "1.5",
     color: "#b9a874",
+    textAlign: "center",
+    justifyContent: "center",
   };
 
   const teamStyle = {
@@ -103,7 +105,7 @@ const OurTeam = () => {
     justifyContent: "space-around",
     alignItems: "center",
     flexWrap: "wrap",
-    padding: "15px",
+    padding: "16px",
     borderRadius: "2px",
     marginLeft: "5px",
     marginRight: "5px",
@@ -112,8 +114,8 @@ const OurTeam = () => {
   const memberStyle = {
     textAlign: "center",
     margin: "0px",
-    maxWidth: "300px",
-    padding: "2px", // Adding padding
+    maxWidth: "400px",
+    padding: "20px", // Adding padding
   };
 
   return (
