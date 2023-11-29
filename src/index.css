@@ -162,7 +162,7 @@ transition: 2s;
   height: 400px; /* Set the height of the card */
   perspective: 1000px; /* Perspective for 3D effect */
   display: inline-block;
-  margin: 15px; /* Adjust margin as needed */
+  margin: 20px; /* Adjust margin as needed */
   cursor: pointer;
 }
 
@@ -194,7 +194,7 @@ transition: 2s;
   color: #b9a874;
   border: 3px solid #b9a874;
   border-radius: 40px;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -212,7 +212,7 @@ transition: 2s;
 .flip-card-back1 {
   /* Style for back side of the card */
   background-color: black;
-  color: #b9a874;
+  color: #fff;
   padding: 10px;
   transform: rotateY(-180deg);
   display: flex;
@@ -223,4 +223,8 @@ transition: 2s;
 .flip-card-back1 p {
   font-size: 0.7rem;
   text-align: center;
+}
+
+.borderteam{
+  border: 1px solid #b9a874;
 }

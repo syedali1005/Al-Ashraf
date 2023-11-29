@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import Footer from "./scenes/Footer";
 import Team from "./scenes/Team";
 import CompanyPortfolio from "./scenes/Portfolio";
+import TeamBackground from "./scenes/TeamBackground";
 
 const App = () => {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -62,7 +63,7 @@ const App = () => {
                   <AboutUs />
                 </div>
                 <div className="mx-auto md:h-full mb-10">
-                  <Team />
+                  <TeamBackground />
                 </div>
                 <div className="mb-32">
                   <CompanySlider />
@@ -86,8 +87,8 @@ const App = () => {
           <Route exact path="/careers" element={<Careers />} />
           <Route exact path="/contact" element={<ContactUs />} />
         </Routes>
-        <Footer />
         <LineGradient />
+        <Footer />
       </div>
     </HashRouter>
   );
