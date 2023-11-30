@@ -53,7 +53,7 @@ const OurTeam = () => {
   const teamMembers = [
     {
       name: "Mr. Ashraf Jabbar Qureshi",
-      designation: "Chairman of Al-Ashraf Group.",
+      designation: "Chairman/Founder",
       description:
         "Ashraf Jabbar Qureshi, Chairman/Founder of Al-Ashraf Group of Companies, hails from a prestigious lineage known for fruit exporting. He diverged from this legacy, exploring varied sectors from restaurants to real estate, construction, and online retail. His ventures expanded globally, notably founding Indus Enclave in Karachi. His success rests on values of integrity, passion, and hard work. Leveraging his construction background, he embarked on establishing an architectural firm, driven by a profound love for architecture. Ashraf Qureshi's journey epitomizes a dynamic entrepreneurial spirit and a commitment to innovation.",
       imageUrl: "../assets/Ashraf Uncle.jpg",
@@ -67,7 +67,7 @@ const OurTeam = () => {
     },
     {
       name: "Dai Ali Daniyal",
-      designation: "C.E.O of Al-Ashraf Group. ",
+      designation: "Chief Executive Officer",
       description:
         "Dai Ali Daniyal, the CEO of Al-Ashraf Group of Companies, inherits a strong entrepreneurial legacy and honed his skills within the family business. His pursuit of global business knowledge through degrees in Business Management and International Business paved the way for his leadership at Al-Ashraf Group. His strategic vision expanded the group across industries, and his passion for sustainable architecture led him to helm ArmArch, pioneering innovative designs in Pakistan. His journey reflects dedication, vision, and a relentless pursuit of excellence in business and architecture.",
       imageUrl: "../assets/Daniyal.jpg",
@@ -82,7 +82,7 @@ const OurTeam = () => {
     },
     {
       name: "Armash Ashraf",
-      designation: "C.O.O of Al-Ashraf Group.",
+      designation: "Chief Operating Officer",
       description: "Eng. Armash Ashraf, COO of Al-Ashraf Group and Chief Engineer at ArmArch, holds a Bachelor's in Architectural Engineering from Heriot-Watt University. With a focus on sustainability, he completed 31 courses in sustainability techniques and building services technology. Guided by his father's expertise, Armash excels in operations, management, communication, and creativity. He founded ArmArch Architectural Engineering during his studies to revolutionize Pakistan's construction industry with a sustainability focus. In October 2023, ArmArch was launched, marking a significant step toward a more sustainable future in architecture and construction. Armash remains dedicated to driving innovation and excellence.",
       imageUrl: "../assets/Armash.jpg",
       socialMedia: {
