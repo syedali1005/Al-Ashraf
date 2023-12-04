@@ -65,7 +65,7 @@ const App = () => {
                 <div className="mx-auto md:h-full mb-10">
                   <TeamBackground />
                 </div>
-                <div className="mb-32">
+                <div className="mb-32 ">
                   <CompanySlider />
                   </div>
                 <div className="w-5/6 mx-auto md:h-full">
