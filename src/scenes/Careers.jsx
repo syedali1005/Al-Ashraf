@@ -47,6 +47,7 @@ const Careers = () => {
           <form
             onSubmit={handleFormSubmit}
             action="https://docs.google.com/forms/d/e/1FAIpQLSdZC5S2CRL_6hQT4mkD-hXrCux5Zyfjc9OxeGlDG9HmGXmo0A/viewform?usp=sf_link"
+            encType="multipart/form-data"
             className="bg-gold p-8 rounded-md shadow-md"
           >
             <p className="text-2xl font-semibold mb-4 text-black">To Join Us</p>
