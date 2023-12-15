@@ -118,7 +118,7 @@ const OurTeam = () => {
   };
 
   return (
-    <section id="our-team" className="my-8 borderteam">
+    <section id="our-team" className="my-28 borderteam">
       <h1
         className="heading23 text-uppercase text-center font-playfair"
         style={paragraphStyle}

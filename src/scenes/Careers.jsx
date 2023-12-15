@@ -46,7 +46,7 @@ const Careers = () => {
         >
           <form
             onSubmit={handleFormSubmit}
-            action="https://docs.google.com/forms/d/e/1FAIpQLSdZC5S2CRL_6hQT4mkD-hXrCux5Zyfjc9OxeGlDG9HmGXmo0A/viewform?usp=sf_link"
+            action="https://forms.gle/CgKbhAAzUtaE6KwbA"
             encType="multipart/form-data"
             className="bg-gold p-8 rounded-md shadow-md"
           >
@@ -99,7 +99,7 @@ const Careers = () => {
               type="submit"
               className="bg-gold text-black p-3 font-semibold hover:bg-black hover:text-gold transition duration-500"
             >
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZC5S2CRL_6hQT4mkD-hXrCux5Zyfjc9OxeGlDG9HmGXmo0A/viewform?usp=sf_link">APPLY NOW</a>
+              <a href="https://forms.gle/CgKbhAAzUtaE6KwbA">APPLY NOW</a>
             </button>
           </form>
         </motion.div>
