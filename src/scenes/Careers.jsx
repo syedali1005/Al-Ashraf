@@ -10,7 +10,7 @@ const Careers = () => {
   };
 
   return (
-    <section id="careers" className="careers py-16 bg-black-100 mt-4">
+    <section id="careers" className="careers lg:py-5 py-16 bg-black-100">
       {/* HEADINGS */}
       <motion.div
         initial="hidden"

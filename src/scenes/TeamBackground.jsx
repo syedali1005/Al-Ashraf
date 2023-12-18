@@ -65,7 +65,7 @@ const OurTeam = () => {
   }, []);
   const teamMembers = [
     {
-      name: "Mr. Ashraf Jabbar Qureshi",
+      name: "Ashraf Jabbar Qureshi",
       designation: "Chairman/Founder",
       description:
         "Ashraf Jabbar Qureshi, Chairman/Founder of Al-Ashraf Group of Companies, hails from a prestigious lineage known for fruit exporting. He diverged from this legacy, exploring varied sectors from restaurants to real estate, construction, and online retail. His ventures expanded globally, notably founding Indus Enclave in Karachi. His success rests on values of integrity, passion, and hard work. Leveraging his construction background, he embarked on establishing an architectural firm, driven by a profound love for architecture. Ashraf Qureshi's journey epitomizes a dynamic entrepreneurial spirit and a commitment to innovation.",
@@ -132,7 +132,7 @@ const OurTeam = () => {
   };
 
   return (
-    <section id="our-team" className="lg:mt-56 md:mt-40 borderteam">
+    <section id="our-team" className="lg:mt-28 xl:mt-10 md:mt-40 borderteam">
       <h1
         className="heading23 text-uppercase text-center font-playfair"
         style={paragraphStyle}

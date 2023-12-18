@@ -50,7 +50,7 @@ const TeamMemberCard = ({ member }) => {
 const OurTeam = () => {
   const teamMembers = [
     {
-      name: "Mr. Ashraf Jabbar Qureshi",
+      name: "Ashraf Jabbar Qureshi",
       designation: "Chairman",
       description:
         "Ashraf Jabbar Qureshi, Chairman/Founder of Al-Ashraf Group of Companies, hails from a prestigious lineage known for fruit exporting. He diverged from this legacy, exploring varied sectors from restaurants to real estate, construction, and online retail. His ventures expanded globally, notably founding Indus Enclave in Karachi. His success rests on values of integrity, passion, and hard work. Leveraging his construction background, he embarked on establishing an architectural firm, driven by a profound love for architecture. Ashraf Qureshi's journey epitomizes a dynamic entrepreneurial spirit and a commitment to innovation.",
