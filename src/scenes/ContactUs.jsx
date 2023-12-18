@@ -79,7 +79,7 @@ const Contact = () => {
             onSubmit={onSubmit}
             action="https://formsubmit.co/syedaliahmad22@gmail.com"
             method="POST"
-            className="bg-gold p-8 rounded-md shadow-md"
+            className="bg-gold p-8 rounded-md shadow-md lg:mr-10"
           >
             <input
               className="w-full bg-white font-semibold text-black placeholder-opaque-black p-3"

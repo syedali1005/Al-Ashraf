@@ -62,7 +62,7 @@ const App = () => {
                 <div className="w-5/6 mx-auto md:h-full">
                   <AboutUs />
                 </div>
-                <div className="mx-auto md:h-full mb-10">
+                <div className="w-full md:w-auto mx-auto md:h-full mb-10">
                   <TeamBackground />
                 </div>
                 <div className="mb-32 ">

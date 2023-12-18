@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 
 const AboutUs = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
+  const isAboveExtraLarge = useMediaQuery("(min-width: 1320px)");
+
   return (
     <section id="about-us" className="pt-10 pb-24">
       {/* HEADER AND IMAGE SECTION */}
@@ -20,22 +22,19 @@ const AboutUs = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          {isAboveLarge ? (
-            <div>
-              <img
-                alt="profile"
-                className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[600px] md:max-w-[1200px]" // Increase max-w values when isAboveLarge is true
-                src="assets/logo-text.png"
-              />
-            </div>
-          ) : (
-            <img
-              alt="profile"
-              className="z-10 w-full max-w-[300px] md:max-w-[600px] margin-bottom: 300px;"
-              src="assets/logo-text.png"
-            />
-          )}
-
+        <div>
+        <img
+          alt="profile"
+          className={`hover:filter hover:saturate-200 transition duration-500 z-10 w-full ${
+            isAboveExtraLarge
+              ? "max-w-[1400px]" // Adjust width for screens larger than 22 inches
+              : isAboveLarge
+              ? "max-w-[1200px]" // Adjust width for screens between 1060px and 1320px
+              : "max-w-[600px]" // Default width for smaller screens
+          }`}
+          src="assets/logo-text.png"
+        />
+      </div>
           <LineGradient width="w-1/3" />
           <p className=" mt-8">
             "The people who make up the team of Al- Ashraf Group of Companies
@@ -108,7 +107,7 @@ const AboutUs = () => {
           <div className="sticky h-32 md:ml-10">
             <div className="z-10" />
             <div className="w-1/2 md:w-3/4 h-32 bg-black absolute right-20 top-0 z-[-1]">
-            <p className="font-playfair font-semibold text-4xl mt-3 text-white justify-center text-center">
+              <p className="font-playfair font-semibold text-4xl mt-3 text-white justify-center text-center">
                 MISSION
               </p>
             </div>
@@ -124,11 +123,11 @@ const AboutUs = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-          <p className="mt-5 justify-between text-center md:text-left">
-            To aspire to be the most esteemed and sought-after company in our
-            industry, passionately committed to creating unparalleled value for
-            our esteemed stakeholders.
-          </p>
+            <p className="mt-5 justify-between text-center md:text-left">
+              To aspire to be the most esteemed and sought-after company in our
+              industry, passionately committed to creating unparalleled value
+              for our esteemed stakeholders.
+            </p>
           </motion.div>
         </motion.div>
         {/* VALUES */}
@@ -146,7 +145,7 @@ const AboutUs = () => {
           <div className="sticky h-32 md:ml-10">
             <div className="z-10" />
             <div className="w-1/2 md:w-3/4 h-32 bg-black absolute right-20 top-0 z-[-1]">
-            <p className="font-playfair font-semibold text-4xl mt-3 text-white justify-center text-center">
+              <p className="font-playfair font-semibold text-4xl mt-3 text-white justify-center text-center">
                 VALUES
               </p>
             </div>
@@ -162,12 +161,12 @@ const AboutUs = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-          <p className="mt-5 justify-between text-center md:text-left">
-            We're a trusted partner with a solid track record and a skilled
-            team, ensuring excellence and innovation. Our commitment extends to
-            our people, customers, and communities, reflecting care for all and
-            the environment.
-          </p>
+            <p className="mt-5 justify-between text-center md:text-left">
+              We're a trusted partner with a solid track record and a skilled
+              team, ensuring excellence and innovation. Our commitment extends
+              to our people, customers, and communities, reflecting care for all
+              and the environment.
+            </p>
           </motion.div>
         </motion.div>
       </div>

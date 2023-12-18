@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
 
 const TeamMemberCard = ({ member }) => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -49,7 +48,21 @@ const TeamMemberCard = ({ member }) => {
     </motion.div>
   );
 };
+
 const OurTeam = () => {
+  const [isMobileView, setIsMobileView] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768); // Adjust the width breakpoint as needed
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const teamMembers = [
     {
       name: "Mr. Ashraf Jabbar Qureshi",
@@ -83,7 +96,8 @@ const OurTeam = () => {
     {
       name: "Armash Ashraf",
       designation: "Chief Operating Officer",
-      description: "Eng. Armash Ashraf, COO of Al-Ashraf Group and Chief Engineer at ArmArch, holds a Bachelor's in Architectural Engineering from Heriot-Watt University. With a focus on sustainability, he completed 31 courses in sustainability techniques and building services technology. Guided by his father's expertise, Armash excels in operations, management, communication, and creativity. He founded ArmArch Architectural Engineering during his studies to revolutionize Pakistan's construction industry with a sustainability focus. In October 2023, ArmArch was launched, marking a significant step toward a more sustainable future in architecture and construction. Armash remains dedicated to driving innovation and excellence.",
+      description:
+        "Eng. Armash Ashraf, COO of Al-Ashraf Group and Chief Engineer at ArmArch, holds a Bachelor's in Architectural Engineering from Heriot-Watt University. With a focus on sustainability, he completed 31 courses in sustainability techniques and building services technology. Guided by his father's expertise, Armash excels in operations, management, communication, and creativity. He founded ArmArch Architectural Engineering during his studies to revolutionize Pakistan's construction industry with a sustainability focus. In October 2023, ArmArch was launched, marking a significant step toward a more sustainable future in architecture and construction. Armash remains dedicated to driving innovation and excellence.",
       imageUrl: "../assets/Armash.jpg",
       socialMedia: {
         linkedin: "https://www.linkedin.com/in/johndoe/",
@@ -97,6 +111,7 @@ const OurTeam = () => {
     fontSize: "16px",
     lineHeight: "1.5",
     color: "#b9a874",
+    marginLeft: "10px",
   };
 
   const teamStyle = {
@@ -108,26 +123,25 @@ const OurTeam = () => {
     borderRadius: "2px",
     marginLeft: "5px",
     marginRight: "5px",
+    border: "1px solid #yourBorderColor", // Apply border for larger screens
   };
 
-  const memberStyle = {
-    textAlign: "center",
-    margin: "0px",
-    maxWidth: "300px",
-    padding: "2px", // Adding padding
+  const mobileTeamStyle = {
+    ...teamStyle,
+    border: "none", // Remove border for mobile view
   };
 
   return (
-    <section id="our-team" className="my-28 borderteam">
+    <section id="our-team" className="lg:mt-56 md:mt-40 borderteam">
       <h1
         className="heading23 text-uppercase text-center font-playfair"
         style={paragraphStyle}
       >
         <b>OUR TEAM</b>
       </h1>
-      <div className="team-members mt-15" style={teamStyle}>
+      <div className="team-members mt-15" style={isMobileView ? mobileTeamStyle : teamStyle}>
         {teamMembers.map((member, index) => (
-          <div key={index} style={memberStyle}>
+          <div key={index}>
             <TeamMemberCard member={member} />
           </div>
         ))}

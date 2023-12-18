@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+
 const CompanySlider = () => {
   const [portfolioItems, setPortfolioItems] = useState([]);
-
+  
   useEffect(() => {
     const dummyData = [
       {
@@ -34,7 +35,7 @@ const CompanySlider = () => {
 
   return (
     <section className="bg-black py-16 mt-16">
-      <div className="container mx-auto px-4 h-auto w-auto">
+      <div className="container mx-auto px-4 h-auto w-auto max-w-screen-2xl">
         <h2 className="text-4xl font-bold mb-8 text-center text-gold">Our Portfolio</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {portfolioItems.map((item) => (
@@ -58,7 +59,7 @@ const CompanySlider = () => {
             </div>
           ))}
         </div>
-        <div className="flex place-content-center justify-center mt-8">
+        <div className="flex justify-center mt-8">
           <Link to="/portfolio" className="bg-gold py-2 px-4 rounded-md text-white font-semibold hover:bg-black transition duration-200">
             View More ...
           </Link>

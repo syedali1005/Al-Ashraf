@@ -1,15 +1,20 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-import logo from "../assets/logo-icon.png"; 
+import logo from "../assets/logo-icon.png";
 
 const Footer = () => {
   return (
     <footer className="bg-black text-gold py-8 pl-8 pr-8 mt-16">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div className="container mx-auto flex flex-col md:flex-row justify-center items-center lg:gap-64 lg:ml-40">
         <div className="text-center md:text-left mb-4 md:mb-0">
           <h2 className="text-2xl font-semibold">Contact Us</h2>
-          <p>Email: <a href="mailto:info@alashrafgoc.com">info@alashrafgoc.com</a></p>
-          <p>Phone: <a href="tel:+111ASHRAF">(111) ASHRAF</a> (274-723)</p>
+          <p>
+            Email:{" "}
+            <a href="mailto:info@alashrafgoc.com">info@alashrafgoc.com</a>
+          </p>
+          <p>
+            Phone: <a href="tel:+111ASHRAF">(111) ASHRAF</a> (274-723)
+          </p>
         </div>
         <div className="text-center mb-4 md:mb-0">
           <h2 className="text-2xl font-semibold pb-4">Follow Us</h2>

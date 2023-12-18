@@ -226,6 +226,11 @@ transition: 2s;
 }
 
 .borderteam{
-  border: 1px solid #b9a874;
+  border: 4px double #b9a874;
 }
 
+@media (max-width: 768px) {
+  .hide-border {
+    border: none;
+  }
+}

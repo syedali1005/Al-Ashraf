@@ -24,7 +24,7 @@ const CustomLink = ({ page, selectedPage, setSelectedPage }) => {
   return (
     <Link
       to={to}
-      className={`hover:text-gold transition duration-100`}
+      className={`hover:text-gold transition duration-100 text-lg lg:text-xl`} // Adjust font size
       onClick={handleClick}
     >
       {page}
@@ -44,13 +44,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
   return (
     <nav className={`${navbarBackground} z-40 w-full top-0 py-0 shadow-lg`}>
-      <div className="flex items-center justify-between w-5/6 mx-auto">
-        <nav
-          className="navbar123 hover:filter hover:saturate-200 cursor-pointer transition duration-500"
-          onClick={handleLogoClick}
-        >
-          <img src={logo} alt="Your Logo" className="logo" />
-        </nav>
+    <div className="flex items-center justify-between w-5/6 mx-auto">
+    <nav
+    className="navbar123 hover:filter hover:saturate-200 cursor-pointer transition duration-500"
+    onClick={handleLogoClick}
+    >
+    <img src={logo} alt="Your Logo" className="logo w-32 lg:w-48" /> {/* Adjust width */}
+    </nav>
 
         {/* DESKTOP NAV */}
         {isDesktop ? (
